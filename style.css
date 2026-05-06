@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-home {
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.page-home h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-home p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.page-home a {
+  font-size: 1.1rem;
+}
+
+.projects {
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+
+.page-selune {
+  padding: 2rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-selune h1,
+.page-selune h2 {
+  color: #58a6ff;
+}
+
+.page-selune .section {
+  margin-bottom: 2.5rem;
+}
+
+.page-selune .btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: #238636;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.page-selune .btn:hover {
+  background: #2ea043;
+}
+
+.page-selune .screenshots {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.page-selune .screenshots img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+@media (min-width: 700px) {
+  .page-selune .screenshots {
+    grid-template-columns: 1fr 1fr;
+  }
+}
