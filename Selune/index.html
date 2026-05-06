@@ -62,8 +62,24 @@
   <div class="section">
     <h2>Downloads</h2>
     <p>macOS, Windows, and Linux versions are available on GitHub Releases.</p>
+    <p id="download-count">Total downloads: <span id="download-count-value">…</span></p>
     <a class="btn" href="https://github.com/tranquiliste/Selune/releases">Download Selune</a>
   </div>
+
+  <script>
+    (async () => {
+      try {
+        const res = await fetch("https://api.github.com/repos/tranquiliste/Selune/releases");
+        const releases = await res.json();
+        const total = releases.reduce((sum, rel) =>
+          sum + rel.assets.reduce((s, a) => s + a.download_count, 0), 0
+        );
+        document.getElementById("download-count-value").textContent = total.toLocaleString();
+      } catch {
+        document.getElementById("download-count-value").textContent = "N/A";
+      }
+    })();
+  </script>
 
   <div class="section">
     <h2>Source Code</h2>
