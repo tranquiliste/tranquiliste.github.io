@@ -41,6 +41,22 @@
     .btn:hover {
       background: #2ea043;
     }
+    .screenshots {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .screenshots img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+    @media (min-width: 700px) {
+      .screenshots {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -51,12 +67,29 @@
   <div class="section">
     <h2>Présentation</h2>
     <p>
-      Selune est un fork indépendant d’AstroCatalogueViewer.  
-      L’application propose une grille d’images rapide, des filtres, des métadonnées riches et un système de notes pour planifier vos sessions et suivre votre progression.
+      Selune est un fork indépendant d’AstroCatalogueViewer .  
+      L’application propose une grille d’images rapide, des filtres, des métadonnées riches et un système de notes pour planifier vos sessions et suivre votre progression .
     </p>
-    <p>
-      Nouveautés du fork Selune :
+  </div>
+
+  <div class="section">
+    <h2>Captures d’écran</h2>
+    <p>Voici un aperçu de l’interface de Selune.</p>
+
+    <div class="screenshots">
+      <img src="screenshot-grid.jpg" alt="Grille d’images — Selune">
+      <img src="screenshot-details.jpg" alt="Vue détaillée — Selune">
+      <img src="screenshot-notes.jpg" alt="Notes et métadonnées — Selune">
+      <img src="screenshot-lightbox.jpg" alt="Lightbox plein écran — Selune">
+    </div>
+
+    <p style="opacity:0.7; font-size:0.9rem; margin-top:1rem;">
+      Remplace les fichiers <code>screenshot-*.jpg</code> par tes vraies captures dans le dossier <code>Selune/</code>.
     </p>
+  </div>
+
+  <div class="section">
+    <h2>Nouveautés du fork Selune</h2>
     <ul>
       <li>Nouveaux catalogues (LBN, Sh2, VdB, etc.) </li>
       <li>Migration intégrée des notes depuis AstroCatalogueViewer </li>
@@ -69,4 +102,27 @@
   <div class="section">
     <h2>Fonctionnalités principales</h2>
     <ul>
-      <li>Grille d’images rapide avec zoom
+      <li>Grille d’images rapide avec zoom, recherche et filtres (catalogue, type, statut) </li>
+      <li>Vue détaillée en deux colonnes avec zoom/pan et notes</li>
+      <li>Miniatures Wikipédia pour les images manquantes (optionnel)</li>
+      <li>Lightbox plein écran</li>
+      <li>Correspondance intelligente des noms (Messier ↔ NGC)</li>
+      <li>Dossiers d’images par catalogue ou dossier maître unique</li>
+      <li>Suggestions de visibilité basées sur RA/Dec + latitude/longitude</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Téléchargements</h2>
+    <p>Les versions macOS, Windows et Linux sont disponibles sur GitHub Releases.</p>
+    <a class="btn" href="https://github.com/tranquiliste/Selune/releases">Télécharger Selune</a>
+  </div>
+
+  <div class="section">
+    <h2>Code source</h2>
+    <p>Selune est open‑source et disponible sur GitHub.</p>
+    <a href="https://github.com/tranquiliste/Selune">Voir le dépôt GitHub</a>
+  </div>
+
+</body>
+</html>
