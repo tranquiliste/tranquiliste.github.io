@@ -63,6 +63,32 @@ a:hover {
   margin-right: auto;
 }
 
+.selune-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  color: #e6edf3;
+  font-weight: 600;
+}
+
+.selune-home-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #30363d;
+}
+
+.selune-home-link:hover {
+  text-decoration: none;
+}
+
+.selune-home-link span {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .page-selune h1,
 .page-selune h2 {
   color: #58a6ff;
