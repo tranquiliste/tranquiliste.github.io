@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Callback</title>
+<head><meta charset="utf-8"/><title>BudgetManager — callback</title></head>
+<body>
+  <h1>Autorisation</h1>
+  <p id="msg">En attente du code…</p>
+  <pre id="code"></pre>
   <script>
-    location.replace('http://localhost:8765/callback' + location.search);
+    const params = new URLSearchParams(location.search);
+    const code = params.get('code');
+    if (code) {
+      document.getElementById('code').textContent = code;
+      document.getElementById('msg').textContent =
+        'Code reçu — redirection locale… (sinon copie-colle dans BudgetManager)';
+      // Auto si l'app écoute :
+      location.replace('http://localhost:8765/callback' + location.search);
+    } else {
+      document.getElementById('msg').textContent =
+        'Pas de code dans l’URL. Relance l’auth depuis BudgetManager.';
+    }
   </script>
-</head>
-<body></body>
+</body>
 </html>
