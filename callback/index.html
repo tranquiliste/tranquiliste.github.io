@@ -11,13 +11,11 @@
     if (code) {
       document.getElementById('code').textContent = code;
       document.getElementById('msg').textContent =
-        'Code reçu — redirection locale… (sinon copie-colle dans BudgetManager)';
-      // Auto si l'app écoute :
+        "Code reçu — redirection locale… (sinon copie-colle dans BudgetManager)";
       location.replace('http://localhost:8765/callback' + location.search);
     } else {
       document.getElementById('msg').textContent =
-        'Pas de code dans l’URL. Relance l’auth depuis BudgetManager.';
+        "Pas de code dans l'URL. Relance l'auth depuis BudgetManager.";
     }
-  </script>
-</body>
+  </script></body>
 </html>
